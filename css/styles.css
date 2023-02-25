@@ -280,6 +280,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.form-elements-container:not(:last-child) {
+  margin-bottom: 10px;
+}
 .form-element1 {
   font-weight: 400;
   font-size: 12px;
@@ -287,6 +290,47 @@ body {
   letter-spacing: 0.01em;
   color: #757575;
   text-transform: capitalize;
+  margin-bottom: 4px;
+}
+.form-element2 {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.area-text {
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+}
+.statement-form {
+  width: 419px;
+  height: 24px;
+  margin: 20px 54px 30px 55px;
+}
+.statement-container {
+  padding-top: 5px;
+  padding-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+.statement-text {
+  width: 395px;
+  height: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-left: 8px;
+}
+.checkwindow {
+  width: 16px;
+  height: 15px;
+  color: var(--main-text-color);
 }
 .buttons-index {
   text-align: center;
