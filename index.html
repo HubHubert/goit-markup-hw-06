@@ -69,51 +69,64 @@
             </svg>
           </button>
           <h3 class="modal-title">Zostaw swoje dane w formularzu poniżej</h3>
-          <form class="form-container">
-            <div class="form-elements-container">
-              <label class="form-element1" for="name">Imię</label>
-              <div class="mini-form-container">
-                <svg class="person-icon">
-                  <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
-                </svg>
-                <input class="form-element2" name="name" id="name" />
-              </div>
+          <form class="form-container" name="name-1" autocomplete="off">
+            <label class="l-1" for="user-name">Imię</label>
+            <div class="container-input">
+              <svg class="form-icons">
+                <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+              </svg>
+              <input
+                class="i-looks"
+                type="text"
+                name="name"
+                id="user-name"
+                required
+              />
             </div>
-
-            <div class="form-elements-container">
-              <label class="form-element1" for="phone">telefon</label>
-              <div class="mini-form-container">
-                <svg class="phone-icon">
-                  <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
-                </svg>
-                <input class="form-element2" name="phone" id="phone" />
-              </div>
+            <label class="l-2" for="phone-number">Telefon</label>
+            <div class="container-input">
+              <svg class="form-icons">
+                <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
+              </svg>
+              <input
+                class="i-looks"
+                type="tel"
+                name="phone"
+                id="phone-number"
+                required
+              />
             </div>
-            <div class="form-elements-container">
-              <label class="form-element1" for="mail">email</label>
-              <div class="mini-form-container">
-                <svg class="mail-icon">
-                  <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
-                </svg>
-                <input class="form-element2" name="mail" id="mail" />
-              </div>
+            <label class="l-3" for="email-name">Email</label>
+            <div class="container-input">
+              <svg class="form-icons">
+                <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
+              </svg>
+              <input
+                class="i-looks"
+                type="email"
+                name="mail"
+                id="email-name"
+                required
+              />
             </div>
-            <div class="form-elements-container">
-              <label class="form-element1" for="comment">komenatrz</label>
-              <textarea
-                class="area-text"
-                name="comment"
-                id="comment"
-                placeholder="Wprowadź tekst"
-              ></textarea>
-            </div>
+            <label class="l-4" for="comment">Komenatrz</label>
+            <textarea
+              class="comment-area"
+              type="text"
+              name="comment"
+              id="comment"
+              placeholder="Wprowadź tekst"
+            ></textarea>
+            <label class="statement-l" for="check-area">
+              <input type="checkbox" name="check-area" id="check-area" />
+              Oświadczam iż akceptuję
+              <span class="statement-accent-text">Regulamin</span> i
+              <span class="statement-accent-text">Politykę Prywatności.</span>
+            </label>
+            <button class="modal-btn" type="submit">Wyślij</button>
           </form>
-          <form class="statement-form"></form>
-
-          <button class="modal-btn" type="submit">Wyślij</button>
         </div>
       </div>
-
       <div class="first-container">
         <div class="container">
           <h1 class="primary-h">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
@@ -465,20 +478,20 @@
             </div>
             <div class="newsletter-container">
               <p class="newsletter-title">Zapisz się do newslettera</p>
-              <div class="test">
-                <form class="footer-form" name="footer-form">
-                  <input
-                    class="footer-form-item"
-                    type="test"
-                    placeholder="E-mail"
-                  />
-                </form>
-                <button type="submit" class="newsletter-btn">
-                  Zapisz się<svg class="newsletter-icon">
+              <form class="footer-form">
+                <input
+                  class="newsletter-i"
+                  type="email"
+                  id="newsletter-input"
+                  placeholder="E-mail"
+                />
+                <button class="newsletter-btn" type="submit">
+                  <span class="newsletter-btn-text">Zapisz się</span
+                  ><svg width="24px" height="24px">
                     <use href="./images/icons.svg#icon-icon-send"></use>
                   </svg>
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
