@@ -383,14 +383,12 @@ body {
   width: 0px;
   height: 0px;
 }
-.test-checkbox:checked ~ .icon-checkbox-2 {
+.box-checkbox:checked ~ .icon-checkbox-2 {
   background-color: var(--second-main-text-color);
   --color2: var(--acent-color-text);
   opacity: 1;
   visibility: visible;
   border-radius: 2px;
-  transition: transform 250ms ease;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-checkbox-1 {
   position: absolute;
