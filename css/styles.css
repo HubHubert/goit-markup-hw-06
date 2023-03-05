@@ -278,6 +278,8 @@ body {
   letter-spacing: 0.01em;
   color: #757575;
   margin-left: 40px;
+  transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .l-2 {
   display: flex;
@@ -288,6 +290,8 @@ body {
   letter-spacing: 0.01em;
   color: #757575;
   margin-left: 40px;
+  transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .l-3 {
   display: flex;
@@ -298,6 +302,8 @@ body {
   letter-spacing: 0.01em;
   color: #757575;
   margin-left: 40px;
+  transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .l-4 {
   display: flex;
@@ -308,6 +314,8 @@ body {
   letter-spacing: 0.01em;
   color: #757575;
   margin-left: 40px;
+  transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container-input {
   width: 448px;
@@ -318,7 +326,9 @@ body {
   align-items: center;
   margin: 4px 40px 10px 40px;
   padding-left: 15px;
-  cursor: none;
+  cursor: pointer;
+  transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container-input:focus-within,
 .container-input:hover {
@@ -331,11 +341,15 @@ body {
   margin-left: 15px;
   border: var(--acent-color-text);
   outline: none;
-  cursor: none;
+  cursor: pointer;
+  transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-icons {
   width: 18px;
   height: 18px;
+  transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .comment-area {
   resize: none;
@@ -346,37 +360,64 @@ body {
   margin: 4px 40px 20px 40px;
   padding: 12px 16px;
   outline: none;
-  cursor: none;
+  cursor: pointer;
+  transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .comment-area:focus,
 .comment-area:hover {
   border: 1px solid var(--second-main-text-color);
 }
-.statement-l {
-  margin-left: 55px;
-  color: rgba(117, 117, 117, 1);
+
+.checkbox-label {
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 420px;
+  height: 24px;
+  margin: 0px 54px 0px 54px;
+}
+.box-checkbox {
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+}
+.test-checkbox:checked ~ .icon-checkbox-2 {
+  background-color: var(--second-main-text-color);
+  --color2: var(--acent-color-text);
+  opacity: 1;
+  visibility: visible;
+  border-radius: 2px;
+  transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-checkbox-1 {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 10%;
+  left: 0;
+}
+.icon-checkbox-2 {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  --color2: var(--main-text-color);
+  visibility: hidden;
+  top: 10%;
+  left: 0;
+}
+.statement-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
+  color: #757575;
+  white-space: nowrap;
+  margin: 0px 0px 0px 23px;
 }
-input[type="checkbox"] {
-  position: relative;
-  width: 16px;
-  height: 15px;
-  opacity: 1;
-  outline: none;
-  transition: transform 250ms ease;
-}
-input[type="checkbox"]::before {
-  content: url(../images/icons.svg#icon-Vector);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.statement-accent-text {
+.statement-text-accent {
   color: var(--second-main-text-color);
   text-decoration: underline;
 }
@@ -859,7 +900,7 @@ input[type="checkbox"]::before {
   background: var(--acent-color-for-containers-two);
   padding: 15px 16px;
   margin-right: 12px;
-  cursor: none;
+  cursor: pointer;
 }
 .newsletter-btn {
   width: 200px;
